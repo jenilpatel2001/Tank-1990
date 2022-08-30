@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     float bulletspeed = 2.5f;
-    
     PlayerBehaviour player;
     float horizontalspeed;
     float verticalspeed;
@@ -31,6 +30,7 @@ public class BulletBehaviour : MonoBehaviour
             Destroy(gameObject);
         }else if (collision.gameObject.CompareTag("enemy"))
         {
+            
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("enemybullet"))

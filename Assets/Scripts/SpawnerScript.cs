@@ -16,13 +16,8 @@ public class SpawnerScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(spawnenemytimegap());
-        //spawners = new GameObject[3];
-        for (int i = 0; i < 6; i++)
-        {
-            spawners[i] = transform.GetChild(i).gameObject;
-        }
+        
     }
-    
     
     void spawnenenemy()
     {

@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using SimpleInputNamespace;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
 
 public class PlayerBehaviour : MonoBehaviour
 {
-     float speed = 2;
+    float speed = 2;
     //public LayerMask stopmove;
-  
 
+    public AudioSource audiosourse;
+    public AudioClip audioclip;
    
     Rigidbody2D rb;
     [SerializeField] Transform canon;
     [SerializeField] GameObject BulletPrefab;
+    [SerializeField] Animator anime;
 
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
@@ -24,21 +20,12 @@ public class PlayerBehaviour : MonoBehaviour
     private float inputVertical;
 
     public GameObject overscreen;
-    public TextMeshProUGUI finalscore;
-
-
-
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         overscreen.gameObject.SetActive(false);
     }
-
-  
-
-
-    //ui movements by event trigger------------------
-
 
     // Update is called once per frame
     void Update()
@@ -83,18 +70,17 @@ public class PlayerBehaviour : MonoBehaviour
        
     }
 
-    
-
-
     public void onfire()
     {
+        audiosourse.PlayOneShot(audioclip);
        Instantiate(BulletPrefab, canon.position, transform.rotation);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("enemybullet"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject , 1f);
+            anime.SetTrigger("dead");
             Time.timeScale = 0;
             overscreen.gameObject.SetActive(true);
             ScoreManager.instance.decreaselife();

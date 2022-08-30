@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -38,7 +35,7 @@ public class Targetscript : MonoBehaviour
             
             Time.timeScale = 0;
             passedscreen.SetActive(true);
-           // ScoreManager.instance.scoreTxt = finalscore;
+           
                
         }
     }
@@ -68,5 +65,9 @@ public class Targetscript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-   
+
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+    }
 }

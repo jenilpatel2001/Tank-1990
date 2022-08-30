@@ -7,6 +7,8 @@ public class EnemyMovement : MovementScript
     public Transform canon;
     float firerate;
     public GameObject bulletprefab;
+    public Animator anime;
+    
     
 
     Rigidbody2D rb2d;
@@ -53,22 +55,33 @@ public class EnemyMovement : MovementScript
             firerate = 2;
         }
     }
+   
     void OnCollisionEnter2D(Collision2D collision)
     {
         RandomDirection();
         if (collision.gameObject.CompareTag("bullet"))
         {
+
             
-            Destroy(gameObject);
+            anime.SetTrigger("isDestroy");
+            Destroy(gameObject, 0.f);
             ScoreManager.instance.IncreaseScore(100);
             ScoreManager.instance.decreaseenemycount();
 
         }
+
     }
+
+        
+    
     void FixedUpdate()
     {
         if (verticalvalue != 0 && isMoving == false) StartCoroutine(MoveVertical(verticalvalue, rb2d));
         else if (horizontalvalue != 0 && isMoving == false) StartCoroutine(MoveHorizontal(horizontalvalue, rb2d));
+    }
+    public void death()
+    {
+        
     }
     
 }
