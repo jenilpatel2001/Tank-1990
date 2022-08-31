@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b126790494ad8478c81f28e9bd402174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroubullet: {fileID: 8300000, guid: 72df2c7503886435a877f5e989d3d40a, type: 3}
+  audio: {fileID: 0}
 --- !u!50 &3764541102446864605
 Rigidbody2D:
   serializedVersion: 4

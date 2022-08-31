@@ -7,12 +7,14 @@ public class EnemyMovement : MovementScript
     public Transform canon;
     float firerate;
     public GameObject bulletprefab;
-    public Animator anime;
+    public Animator animator;
+    public AudioSource audio;
+    public AudioClip destroyenemysound;
     
-    
-
     Rigidbody2D rb2d;
     float horizontalvalue, verticalvalue;
+
+    
 
     enum Direction { Up, Down, Left, Right };
     Direction[] direction = { Direction.Up, Direction.Down, Direction.Left, Direction.Right };
@@ -55,16 +57,16 @@ public class EnemyMovement : MovementScript
             firerate = 2;
         }
     }
-   
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         RandomDirection();
         if (collision.gameObject.CompareTag("bullet"))
         {
 
-            
-            anime.SetTrigger("isDestroy");
-            Destroy(gameObject, 0.f);
+            animator.SetTrigger("isDestroy");
+            audio.PlayOneShot(destroyenemysound);
+            Destroy(gameObject, 0.3f);
             ScoreManager.instance.IncreaseScore(100);
             ScoreManager.instance.decreaseenemycount();
 

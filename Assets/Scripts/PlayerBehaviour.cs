@@ -7,12 +7,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     public AudioSource audiosourse;
     public AudioClip audioclip;
-   
-    Rigidbody2D rb;
+    public static PlayerBehaviour instance;
     [SerializeField] Transform canon;
     [SerializeField] GameObject BulletPrefab;
     [SerializeField] Animator anime;
-
+    public AudioClip bulletdestroy;
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
 
@@ -20,22 +19,21 @@ public class PlayerBehaviour : MonoBehaviour
     private float inputVertical;
 
     public GameObject overscreen;
-    
-    private void Start()
+
+
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        overscreen.gameObject.SetActive(false);
+        instance = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        //dpad controls
+        //dbutton controls
         inputHorizontal = SimpleInput.GetAxis(horizontalAxis);
         inputVertical = SimpleInput.GetAxis(verticalAxis);
 
-        
+
         //Flip the player towards Direction------------------------------------------------------------------------------
         if (inputHorizontal > 0)
         {
@@ -67,7 +65,12 @@ public class PlayerBehaviour : MonoBehaviour
         {
             transform.Translate(movedirection2 * speed * Time.deltaTime, Space.World);
         }
-       
+
+    }
+    //enemy bullet destroy sound
+    public void bulletsound()
+    {
+        audiosourse.PlayOneShot(bulletdestroy);
     }
 
     public void onfire()
@@ -79,9 +82,9 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemybullet"))
         {
-            Destroy(gameObject , 1f);
-            anime.SetTrigger("dead");
+            Destroy(gameObject, 3f);
             Time.timeScale = 0;
+            anime.SetTrigger("dead");
             overscreen.gameObject.SetActive(true);
             ScoreManager.instance.decreaselife();
 

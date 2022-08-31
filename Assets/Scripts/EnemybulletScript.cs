@@ -8,6 +8,7 @@ public class EnemybulletScript : MonoBehaviour
     PlayerBehaviour player;
     float horizontalspeed;
     float verticalspeed;
+    
 
     // Update is called once per frame
     void Update()
@@ -18,7 +19,9 @@ public class EnemybulletScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         Destroy(gameObject);
+        
     }
 
 }

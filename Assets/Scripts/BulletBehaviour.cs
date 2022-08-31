@@ -10,6 +10,7 @@ public class BulletBehaviour : MonoBehaviour
     float verticalspeed;
     
 
+
     // Update is called once per frame
     void Update()
     {
@@ -17,25 +18,14 @@ public class BulletBehaviour : MonoBehaviour
         transform.Translate(Vector3.up * bulletspeed* Time.deltaTime);
         
     }
+    //bullet destroy when collide with other tag expect player
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Brick"))
+        if (!collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-        }else if (collision.gameObject.CompareTag("Steel"))
-        {
-            Destroy(gameObject);
-        }else if (collision.gameObject.CompareTag("Target"))
-        {
-            Destroy(gameObject);
-        }else if (collision.gameObject.CompareTag("enemy"))
-        {
+            PlayerBehaviour.instance.bulletsound();
             
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("enemybullet"))
-        {
-            Destroy(gameObject);
         }
     }
 }
