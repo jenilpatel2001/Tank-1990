@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+   
     float speed = 2;
-    //public LayerMask stopmove;
-
     public AudioSource audiosourse;
     public AudioClip audioclip;
     public static PlayerBehaviour instance;
@@ -78,18 +77,20 @@ public class PlayerBehaviour : MonoBehaviour
         audiosourse.PlayOneShot(audioclip);
        Instantiate(BulletPrefab, canon.position, transform.rotation);
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("enemybullet"))
         {
-            Destroy(gameObject, 3f);
-            Time.timeScale = 0;
-            anime.SetTrigger("dead");
-            overscreen.gameObject.SetActive(true);
-            ScoreManager.instance.decreaselife();
+                Time.timeScale = 0;
+                anime.SetTrigger("dead");
 
+                overscreen.gameObject.SetActive(true);
+                ScoreManager.instance.decreaselife();
+            }
+           
 
         }
     }
 
-}
+

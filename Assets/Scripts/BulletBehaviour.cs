@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
+    public static BulletBehaviour instance;
     float bulletspeed = 2.5f;
     PlayerBehaviour player;
     float horizontalspeed;
     float verticalspeed;
-    
+    int damage = 100;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,6 +23,12 @@ public class BulletBehaviour : MonoBehaviour
         transform.Translate(Vector3.up * bulletspeed* Time.deltaTime);
         
     }
+
+    public void deducthealth(int d)
+    {
+        EnemyMovement.instance.health -= d;
+    }
+ 
     //bullet destroy when collide with other tag expect player
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,6 +36,7 @@ public class BulletBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
             PlayerBehaviour.instance.bulletsound();
+            
             
         }
     }

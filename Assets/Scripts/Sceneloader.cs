@@ -25,5 +25,9 @@ public class Sceneloader : MonoBehaviour
     {
         SceneManager.LoadScene("Level 5");
     }
-    
+    //quit the game
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+    }
 }

@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2352708580741019448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000000016347, y: 0, z: 5.5228e-10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.21426171, y: 0.21426171, z: 0.21426171}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,9 +109,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2352708581999661844}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29168853, y: -2.2535424, z: 0.0062960596}
-  m_LocalScale: {x: 1.8230534, y: 1.533022, z: 1.6863241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2352708580741019451}
@@ -150,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c811fdcf394df4f2e8009665a411ab90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
-  smalltank: {fileID: 5335151310992195259, guid: 1468bb33dacec4e85921f4c3e6de3281, type: 3}
-  bigtank: {fileID: 5335151310992195259, guid: 1468bb33dacec4e85921f4c3e6de3281, type: 3}
+  smalltank: {fileID: 5335151310992195259, guid: 261b697e0bcf842d4b958b595140da7e, type: 3}
+  bigtank: {fileID: 5335151310992195259, guid: 1838a66b2a31c42e79afdcfba92ac5ae, type: 3}
   fasttank: {fileID: 5335151310992195259, guid: 1468bb33dacec4e85921f4c3e6de3281, type: 3}
-  armoredtank: {fileID: 5335151310992195259, guid: 1468bb33dacec4e85921f4c3e6de3281, type: 3}
+  armoredtank: {fileID: 5335151310992195259, guid: 5407a5a4b9df9457784247b5c37197af, type: 3}

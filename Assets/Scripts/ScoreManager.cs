@@ -15,6 +15,8 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI lifetxt;
     public TextMeshProUGUI FINALSCORETXT;
     public TextMeshProUGUI enemycounttxt;
+
+   
     
     private void Start()
     {

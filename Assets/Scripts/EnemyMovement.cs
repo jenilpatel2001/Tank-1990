@@ -8,13 +8,19 @@ public class EnemyMovement : MovementScript
     float firerate;
     public GameObject bulletprefab;
     public Animator animator;
-    public AudioSource audio;
+    public AudioSource Audio;
+    public int health;
     public AudioClip destroyenemysound;
     
     Rigidbody2D rb2d;
     float horizontalvalue, verticalvalue;
 
-    
+    public static EnemyMovement instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     enum Direction { Up, Down, Left, Right };
     Direction[] direction = { Direction.Up, Direction.Down, Direction.Left, Direction.Right };
@@ -63,27 +69,23 @@ public class EnemyMovement : MovementScript
         RandomDirection();
         if (collision.gameObject.CompareTag("bullet"))
         {
-
-            animator.SetTrigger("isDestroy");
-            audio.PlayOneShot(destroyenemysound);
-            Destroy(gameObject, 0.3f);
-            ScoreManager.instance.IncreaseScore(100);
-            ScoreManager.instance.decreaseenemycount();
-
+            BulletBehaviour.instance.deducthealth(100);
+            
+            if (health <= 0)
+            {
+                animator.SetTrigger("isDestroy");
+                Destroy(gameObject, 0.3f);
+                Audio.PlayOneShot(destroyenemysound);
+                ScoreManager.instance.IncreaseScore(100);
+                ScoreManager.instance.decreaseenemycount();
+            } 
         }
 
-    }
-
-        
-    
+    } 
     void FixedUpdate()
     {
         if (verticalvalue != 0 && isMoving == false) StartCoroutine(MoveVertical(verticalvalue, rb2d));
         else if (horizontalvalue != 0 && isMoving == false) StartCoroutine(MoveHorizontal(horizontalvalue, rb2d));
     }
-    public void death()
-    {
-        
-    }
-    
+   
 }

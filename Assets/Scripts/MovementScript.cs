@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class MovementScript : MonoBehaviour
 {
-    public int speed = 1;
+    public float speed;
     protected bool isMoving = false;
 
     // coroutine to move horizontal

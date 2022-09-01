@@ -33,8 +33,8 @@ public class Targetscript : MonoBehaviour
         //  when enemycount board reach at 0 update levelcompletescreen active
         if(ScoreManager.instance.count == 0)
         {
-           passedscreen.SetActive(true);   
-               
+           passedscreen.SetActive(true);
+            Time.timeScale = 0;    
         }
     }
 
