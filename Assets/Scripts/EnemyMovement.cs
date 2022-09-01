@@ -67,18 +67,18 @@ public class EnemyMovement : MovementScript
     void OnCollisionEnter2D(Collision2D collision)
     {
         RandomDirection();
+
         if (collision.gameObject.CompareTag("bullet"))
         {
             BulletBehaviour.instance.deducthealth(100);
-            
-            if (health <= 0)
+            if (health <= 100)
             {
                 animator.SetTrigger("isDestroy");
                 Destroy(gameObject, 0.3f);
                 Audio.PlayOneShot(destroyenemysound);
                 ScoreManager.instance.IncreaseScore(100);
                 ScoreManager.instance.decreaseenemycount();
-            } 
+            }
         }
 
     } 

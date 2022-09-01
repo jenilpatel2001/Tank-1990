@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 5335151310992195259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.49073267, y: 0.46591863, z: 0.59911144}
+  m_LocalScale: {x: 0.5490408, y: 0.49507877, z: 0.59911144}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 954756515519634713}
@@ -187,7 +187,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 1
-  m_Mass: 0.14225614
+  m_Mass: 0.17375474
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -208,11 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c03d794295a40c3bdf1a9befc47ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.5
   canon: {fileID: 954756515519634713}
   bulletprefab: {fileID: 72128212791440886, guid: 239189578d8dc416f889c3d5a7b8b494, type: 3}
   animator: {fileID: 2568262579680352604}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8079586982685471248}
   health: 100
   destroyenemysound: {fileID: 8300000, guid: 35373ed0be2164d528b983ac4e235ce4, type: 3}
 --- !u!95 &2568262579680352604
@@ -344,7 +344,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0029983968, y: 0}
+  m_Offset: {x: 0.005527109, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -355,7 +355,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62217987, y: 1}
+  m_Size: {x: 0.6392309, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &6111015284601952048
 GameObject:

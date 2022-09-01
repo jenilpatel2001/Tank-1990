@@ -16,8 +16,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     private float inputHorizontal;
     private float inputVertical;
-
+   
     public GameObject overscreen;
+
+    private float timewhenallowednextshoot = 0f;
+    private float firegap = 0.5f;
 
 
     private void Awake()
@@ -72,10 +75,17 @@ public class PlayerBehaviour : MonoBehaviour
         audiosourse.PlayOneShot(bulletdestroy);
     }
 
+
+
     public void onfire()
     {
-        audiosourse.PlayOneShot(audioclip);
-       Instantiate(BulletPrefab, canon.position, transform.rotation);
+        if (timewhenallowednextshoot <= Time.time)
+        {
+            audiosourse.PlayOneShot(audioclip);
+            Instantiate(BulletPrefab, canon.position, transform.rotation);
+            timewhenallowednextshoot = Time.time + firegap;
+        }
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

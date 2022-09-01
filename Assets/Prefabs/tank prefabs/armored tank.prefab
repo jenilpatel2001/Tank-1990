@@ -238,8 +238,8 @@ MonoBehaviour:
   canon: {fileID: 954756515519634713}
   bulletprefab: {fileID: 72128212791440886, guid: 239189578d8dc416f889c3d5a7b8b494, type: 3}
   animator: {fileID: 2568262579680352604}
-  Audio: {fileID: 0}
-  health: 100
+  Audio: {fileID: 8079586982685471248}
+  health: 400
   destroyenemysound: {fileID: 8300000, guid: 35373ed0be2164d528b983ac4e235ce4, type: 3}
 --- !u!95 &2568262579680352604
 Animator:
