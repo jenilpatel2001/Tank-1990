@@ -12,6 +12,7 @@ public class EnemyMovement : MovementScript
     public int health;
     public AudioClip destroyenemysound;
     Rigidbody2D rb2d;
+    public int scorepoint;
     float horizontalvalue, verticalvalue;
 
     public static EnemyMovement instance;
@@ -75,7 +76,7 @@ public class EnemyMovement : MovementScript
                 animator.SetTrigger("isDestroy");
                 Destroy(gameObject, 0.3f);
                 Audio.PlayOneShot(destroyenemysound);
-                ScoreManager.instance.IncreaseScore(health);
+                ScoreManager.instance.IncreaseScore(scorepoint);
                 ScoreManager.instance.decreaseenemycount();
             }
         }

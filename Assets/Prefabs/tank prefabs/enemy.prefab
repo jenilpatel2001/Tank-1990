@@ -242,6 +242,7 @@ MonoBehaviour:
   Audio: {fileID: 8079586982685471248}
   health: 100
   destroyenemysound: {fileID: 8300000, guid: 35373ed0be2164d528b983ac4e235ce4, type: 3}
+  scorepoint: 100
 --- !u!114 &-7756026390303697054
 MonoBehaviour:
   m_ObjectHideFlags: 0

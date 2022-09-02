@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7e58f5df6eb3b4b2aa924115ac66852e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Basillion
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7bd9c625c252647c5a619f01384f2658, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

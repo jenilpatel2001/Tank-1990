@@ -8,7 +8,7 @@ public class BulletBehaviour : MonoBehaviour
     public static BulletBehaviour instance;
     public float bulletspeed = 2.5f;
     int playerdamage = 100;
-    
+     public Animator animator;
 
     private void Awake()
     {
@@ -34,9 +34,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player"))
         {
-            
-            
             Destroy(gameObject);
+            animator.SetTrigger("destroybullet");
+            
             PlayerBehaviour.instance.bulletsound();
             
             

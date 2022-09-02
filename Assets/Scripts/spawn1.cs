@@ -17,9 +17,11 @@ public class spawn1 : MonoBehaviour
 
     public void startspawning()
     {
+
         tank = Instantiate(tanks[Random.Range(0, tanks.Length)], transform.position, transform.rotation);
-        if (Random.value <= 0.2)
+        if (Random.value <= 0.5)
         {
+          
             tank.GetComponent<BonusTank>().MakeBonusTank();
         }
 
