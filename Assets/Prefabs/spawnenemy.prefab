@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2352708581999661846}
   - component: {fileID: 2352708581999661847}
   m_Layer: 0
-  m_Name: spawn
+  m_Name: spawnenemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,4 +153,4 @@ MonoBehaviour:
   smalltank: {fileID: 5335151310992195259, guid: 261b697e0bcf842d4b958b595140da7e, type: 3}
   bigtank: {fileID: 5335151310992195259, guid: 1838a66b2a31c42e79afdcfba92ac5ae, type: 3}
   fasttank: {fileID: 5335151310992195259, guid: 1468bb33dacec4e85921f4c3e6de3281, type: 3}
-  armoredtank: {fileID: 5335151310992195259, guid: 5407a5a4b9df9457784247b5c37197af, type: 3}
+  heavytank: {fileID: 5335151310992195259, guid: 261b697e0bcf842d4b958b595140da7e, type: 3}

@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72128212791440886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3318174, y: 1.4297609, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.07799598, y: 0.07799598, z: 0.07799598}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.01
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -136,5 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a41f0dd06a1b47cd9da082b550d806b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroubullet: {fileID: 8300000, guid: 72df2c7503886435a877f5e989d3d40a, type: 3}
-  audio: {fileID: 1183887027452549076, guid: 74542b4332c0f42db9e5012c975d5f6a, type: 3}
+  bulletspeed: 2.5

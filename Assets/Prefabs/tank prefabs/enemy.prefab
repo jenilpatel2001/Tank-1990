@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8220549616183154225}
   - component: {fileID: 1011460477967987525}
   - component: {fileID: -7305783987009380977}
+  - component: {fileID: -7756026390303697054}
   - component: {fileID: 2568262579680352604}
   - component: {fileID: 8079586982685471248}
   m_Layer: 10
@@ -236,11 +237,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   canon: {fileID: 954756515519634713}
-  bulletprefab: {fileID: 72128212791440886, guid: 239189578d8dc416f889c3d5a7b8b494, type: 3}
+  bulletprefab: {fileID: 8300070895294844091, guid: e70499c86d4984739a9b9d592ae34bf7, type: 3}
   animator: {fileID: 2568262579680352604}
   Audio: {fileID: 8079586982685471248}
   health: 100
   destroyenemysound: {fileID: 8300000, guid: 35373ed0be2164d528b983ac4e235ce4, type: 3}
+--- !u!114 &-7756026390303697054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335151310992195259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b431dddec8e644002bcf36835df4abcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &2568262579680352604
 Animator:
   serializedVersion: 4

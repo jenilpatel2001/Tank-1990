@@ -1,32 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class BulletBehaviour : MonoBehaviour
 {
     public static BulletBehaviour instance;
-    float bulletspeed = 2.5f;
-    PlayerBehaviour player;
-    float horizontalspeed;
-    float verticalspeed;
-    int damage = 100;
+    public float bulletspeed = 2.5f;
+    int playerdamage = 100;
+    
 
     private void Awake()
     {
         instance = this;
     }
+    
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         // bullet moves towards axis
-        transform.Translate(Vector3.up * bulletspeed* Time.deltaTime);
-        
+        transform.Translate(Vector3.up * bulletspeed * Time.deltaTime);
+
     }
 
-    public void deducthealth(int d)
+    public void deducthealth()
     {
-        EnemyMovement.instance.health -= d;
+        EnemyMovement.instance.health -= playerdamage;
     }
  
     //bullet destroy when collide with other tag expect player
@@ -34,11 +34,20 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player"))
         {
+            
+            
             Destroy(gameObject);
             PlayerBehaviour.instance.bulletsound();
             
             
         }
+        //if (!collision.gameObject.CompareTag("Player"))
+        //{
+        //    Destroy(gameObject);
+        //    PlayerBehaviour.instance.bulletsound();
+
+
+        //}
     }
 }
   

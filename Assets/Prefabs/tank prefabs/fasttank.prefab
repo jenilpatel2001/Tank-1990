@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 1034755662917440605}
   - component: {fileID: 8220549616183154225}
   - component: {fileID: -7305783987009380977}
-  - component: {fileID: 2568262579680352604}
   - component: {fileID: 8079586982685471248}
+  - component: {fileID: 2568262579680352604}
   - component: {fileID: 4972320001012200517}
+  - component: {fileID: 6270285556831986576}
   m_Layer: 10
   m_Name: fasttank
   m_TagString: enemy
@@ -210,31 +211,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   canon: {fileID: 954756515519634713}
-  bulletprefab: {fileID: 72128212791440886, guid: 239189578d8dc416f889c3d5a7b8b494, type: 3}
+  bulletprefab: {fileID: 8300070895294844091, guid: e70499c86d4984739a9b9d592ae34bf7, type: 3}
   animator: {fileID: 2568262579680352604}
   Audio: {fileID: 8079586982685471248}
   health: 100
   destroyenemysound: {fileID: 8300000, guid: 35373ed0be2164d528b983ac4e235ce4, type: 3}
---- !u!95 &2568262579680352604
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5335151310992195259}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8bf1f6a9d0ebb4c7da32dbbd06129a23, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &8079586982685471248
 AudioSource:
   m_ObjectHideFlags: 0
@@ -331,6 +312,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &2568262579680352604
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335151310992195259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bf1f6a9d0ebb4c7da32dbbd06129a23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &4972320001012200517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -357,6 +358,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6392309, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6270285556831986576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335151310992195259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c13af32a2f94ea8a09f3c6219b8c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6111015284601952048
 GameObject:
   m_ObjectHideFlags: 0

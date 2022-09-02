@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 21999989777754073}
   - component: {fileID: 21999989777754078}
-  - component: {fileID: 21999989777754079}
+  - component: {fileID: 4797877280089167217}
+  - component: {fileID: -3779834962816013771}
   m_Layer: 0
   m_Name: gold
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21999989777754076}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.81, y: 2.26, z: 0}
   m_LocalScale: {x: 0.12857641, y: 0.12857641, z: 0.12857641}
   m_ConstrainProportionsScale: 0
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 53f7ab33fbc474229a11b46d86c80d1a, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: ffe7f964f08ef4821a045a1f1dd0b409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &21999989777754079
+--- !u!58 &4797877280089167217
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,4 +101,16 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.56
+  m_Radius: 0.5
+--- !u!114 &-3779834962816013771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21999989777754076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c13af32a2f94ea8a09f3c6219b8c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

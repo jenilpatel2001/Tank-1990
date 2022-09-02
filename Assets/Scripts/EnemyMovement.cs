@@ -11,7 +11,6 @@ public class EnemyMovement : MovementScript
     public AudioSource Audio;
     public int health;
     public AudioClip destroyenemysound;
-    
     Rigidbody2D rb2d;
     float horizontalvalue, verticalvalue;
 
@@ -70,13 +69,13 @@ public class EnemyMovement : MovementScript
 
         if (collision.gameObject.CompareTag("bullet"))
         {
-            BulletBehaviour.instance.deducthealth(100);
+            BulletBehaviour.instance.deducthealth();
             if (health <= 100)
             {
                 animator.SetTrigger("isDestroy");
                 Destroy(gameObject, 0.3f);
                 Audio.PlayOneShot(destroyenemysound);
-                ScoreManager.instance.IncreaseScore(100);
+                ScoreManager.instance.IncreaseScore(health);
                 ScoreManager.instance.decreaseenemycount();
             }
         }
