@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public abstract class MovementScript : MonoBehaviour
+public class MovementScript : MonoBehaviour
 {
     public float speed;
     protected bool isMoving = false;
